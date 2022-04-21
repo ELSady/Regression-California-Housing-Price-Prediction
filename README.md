@@ -1,1 +1,1 @@
-### Data Science Proect Regression Modeling : California Housing Price Prediction
+### Data Science Project Regression Modeling : California Housing Price Prediction
