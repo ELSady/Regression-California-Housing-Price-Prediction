@@ -52,7 +52,7 @@ Gradient boosting regressor far outperformed the other 4 models.
 > GradientBoostingRegressor(max_depth=5, n_estimators=1000, random_state=50)
 
 ### Model Performance on Test Set
-We got the models performance increased after using gridsearch hyperparameter tuning. <br<
+We got the models performance increased after using gridsearch hyperparameter tuning. <br>
 From 55200 to 47682
 >Final Model RMSE : 47682.741973582626 <br>
  Final Model MAE : 31395.550834475882
