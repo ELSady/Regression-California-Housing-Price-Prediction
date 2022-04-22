@@ -6,6 +6,7 @@
 * Linear regression, Support Vector regression and Tree based and Gradient boosting regressor model are used alongside gridsearch cv to find and optimize the best best model.
 
 ### Code and Resource Used
-* Packages : pandas, numpy, sklearn, matplotlib, seaborn, sci-kit learn
+* Packages : pandas, numpy, matplotlib, seaborn, sci-kit learn
 
 ### Exploratory Data Analysis
+* Numerical features distribution 
