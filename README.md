@@ -10,3 +10,53 @@
 
 ### Exploratory Data Analysis
 * Numerical features distribution 
+
+* Income Stratified Distribution
+
+* Population
+
+### Data Pre Processing Before Building and Implement Model
+* First to split between train and test dataset with a proportion of 80 % of train and 20 % of test.
+* Define which features are numerical and categorical ones.
+* Standardizing numerical features with standardscaler, while onehot encoder is used to process the categorical features of both train and test set using custom pieline transformation.
+
+### Model Building
+5 different models are used in which :
+* **Linear Regression**
+* **Decision Tree**
+* **Random Forest**
+* **Gradient BOosting Regressor**
+* **Support Vector Regressor**
+
+### Model Performance
+* **Linear Regression** RMSE : 68777.12503644277
+* **Linear Regression** Validation RMSE : 68917.9102919516
+
+* **Decision Tree** RMSE : 0.0
+* **Decision Tree** Validation RMSE : 67516.34954441145
+
+* **Random Forest** RMSE : 18141.62284949507
+* **Random Forest** Validation RMSE : 68917.9102919516
+
+* **Support Vector** RMSE : 118096.46334907328
+* **Support Vector** Validation RMSE : 118104.00396212477
+
+* **Gradient Boosting** RMSE : 118096.46334907328
+* **Gradient Boosting** Validation RMSE : 55200.46007555312
+
+Linear regression, deciison tree and random forest do not perform very well for this particular dataset all of them exibit a certain degree of overfitting, especially decision tree. <br>
+Gradient boosting regressor far outperformed the other 4 models.
+
+### Hyperparamneter Tuning
+* Best Model
+> GradientBoostingRegressor(max_depth=5, n_estimators=1000, random_state=50)
+
+
+
+
+
+
+
+
+
+
