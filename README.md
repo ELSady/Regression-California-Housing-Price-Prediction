@@ -25,7 +25,7 @@
 * **Linear Regression**
 * **Decision Tree**
 * **Random Forest**
-* **Gradient BOosting Regressor**
+* **Gradient Boosting Regressor**
 * **Support Vector Regressor**
 
 ### Model Performance
