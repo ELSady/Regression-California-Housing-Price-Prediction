@@ -29,27 +29,31 @@
 * **Support Vector Regressor**
 
 ### Model Performance
-* **Linear Regression** RMSE : 68777.12503644277
-* **Linear Regression** Validation RMSE : 68917.9102919516
+> **Linear Regression** RMSE : 68777.12503644277
+> **Linear Regression** Validation RMSE : 68917.9102919516
 
-* **Decision Tree** RMSE : 0.0
-* **Decision Tree** Validation RMSE : 67516.34954441145
+> **Decision Tree** RMSE : 0.0
+> **Decision Tree** Validation RMSE : 67516.34954441145
 
-* **Random Forest** RMSE : 18141.62284949507
-* **Random Forest** Validation RMSE : 68917.9102919516
+> **Random Forest** RMSE : 18141.62284949507
+> **Random Forest** Validation RMSE : 68917.9102919516
 
-* **Support Vector** RMSE : 118096.46334907328
-* **Support Vector** Validation RMSE : 118104.00396212477
+> **Support Vector** RMSE : 118096.46334907328
+> **Support Vector** Validation RMSE : 118104.00396212477
 
-* **Gradient Boosting** RMSE : 118096.46334907328
-* **Gradient Boosting** Validation RMSE : 55200.46007555312
+> **Gradient Boosting** RMSE : 118096.46334907328
+> **Gradient Boosting** Validation RMSE : 55200.46007555312
 
 Linear regression, deciison tree and random forest do not perform very well for this particular dataset all of them exibit a certain degree of overfitting, especially decision tree. <br>
 Gradient boosting regressor far outperformed the other 4 models.
 
 ### Hyperparamneter Tuning
-* Best Model
+* Best Model after gridsearch hyperparameter tuning
 > GradientBoostingRegressor(max_depth=5, n_estimators=1000, random_state=50)
+
+### Model Performance on Test Set
+>Final Model RMSE : 47682.741973582626 <br>
+ Final Model MAE : 31395.550834475882
 
 
 
