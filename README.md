@@ -9,12 +9,15 @@
 * Packages : pandas, numpy, matplotlib, seaborn, sci-kit learn
 
 ### Exploratory Data Analysis
-* Numerical features distribution 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
-* Income Stratified Distribution
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
-* Population
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index2.png) <br>
+* Numerical features distribution <br>
+
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) 
+
+* Income Stratified Distribution <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) 
+
+* Population <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index2.png)
 
 ### Data Pre Processing Before Building and Implement Model
 * First to split between train and test dataset with a proportion of 80 % of train and 20 % of test.
