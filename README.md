@@ -10,7 +10,7 @@
 
 ### Exploratory Data Analysis
 * Numerical features distribution 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
 
 * Income Stratified Distribution
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
