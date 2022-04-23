@@ -10,14 +10,14 @@
 
 ### Exploratory Data Analysis
 * Numerical features distribution 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png)
-<br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) br>
+
 * Income Stratified Distribution
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png)
-<br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+
 * Population
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index2.png)
-<br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index2.png) <br>
+
 ### Data Pre Processing Before Building and Implement Model
 * First to split between train and test dataset with a proportion of 80 % of train and 20 % of test.
 * Define which features are numerical and categorical ones.
