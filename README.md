@@ -44,7 +44,12 @@ Dataset includes 20.640 observations and 10 columns with a total dimesion of 206
 
 ### Descriptive Statistics 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2009-38-56%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
-* Several features have a gap between its median and mean, possibly they willbe either right or left skedwed distribution. <br>
+Insights we can infer foloowing this distribution plots include:
+* Several features have a gap between its median and mean, possibly they willbe either right or left skedwed distribution.
+* Total rooms per households perdominantly in the range of 2500 to 3000. This is also true for total bedrooms with similar amount of range predominantly.
+* Total population density predominantly are in the range 1000 to 2000.
+* For households, predominantly there are approximately 300 to 500 in dataset.
+* Meanwhile the income predominantly around at the range of 3k per year.
 
 ### Features DIstribution
 * Numerical features distribution <br>
