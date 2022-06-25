@@ -44,7 +44,7 @@ Dataset includes 20.640 observations and 10 columns with a total dimesion of 206
 * Data has been cleaned. <br>
 
 ### Descriptive Statistics 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2009-38-56%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 * Several features have a gap between its median and mean, possibly they willbe either right or left skedwed distribution. <br>
 
 ### Features DIstribution
