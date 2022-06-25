@@ -5,7 +5,7 @@
 * One hot encoding and Robust scaler are used to pre process dataaset before implemented it to machine learning model.
 * Several machine learning models are used alongside gridsearch cv to find and optimize the best best model.
 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/intro.png) 
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/images.jpg) 
 
 Property valuation is an imprecise science. Individual appraisers and valuers bring their own experience, metrics and skills to a job. Consistency is difficult, with UK and Australian-based studies suggesting valuations between two professionals can differ by up to 40%. Perhaps a well-trained machine could perform this task in place of a human, with greater consistency and accuracy.
 Let’s prototype this idea and train some ML models using data about a house’s features, costs and neighbourhood profile to predict its value. Our target variable the houses's  price is numerical, hence the ML task is regression. (For a categorical target, the task becomes classification.).
@@ -27,23 +27,26 @@ But first we may need to define the business question.<br>
 * Packages : pandas, numpy, matplotlib, seaborn, sci-kit learn
 
 ### Dataset Profiling
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2006-40-28%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
- * Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400
+* Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-18-30%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png)
  
 ### Features Types
-
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
- * Ocean proximity seems the only categorical / non numeric ones in dataset. It refers to how close approximately the house from the sea / ocean.
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-18-49%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
+* Ocean proximity seems the only categorical / non numeric ones in dataset. It refers to how close approximately the house from the sea / ocean.
  
  ### Missing Value Checking and Handling
  
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
- * Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. If done, then we corss check to see if ther'sstill missing values. <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-19-10%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
+* Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. If done, then we corss check to see if ther'sstill missing values. <br>
+
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-53-30%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
+* Data has been cleaned. <br>
 
 ### Descriptive Statistics 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
- * Several features have a gap between its median and mean, possibly they willbe either right or left skedwed distribution. 
+* Several features have a gap between its median and mean, possibly they willbe either right or left skedwed distribution. 
 
 ### Features DIstribution
 * Numerical features distribution <br>
@@ -56,23 +59,23 @@ But first we may need to define the business question.<br>
 
 ### Data Pre Processing and Model Implementation With Pycaret
 PyCaret is an open-source, low-code machine learning library in Python that automates machine learning workflows. It is an end-to-end machine learning and model management tool that exponentially speeds up the experiment cycle. It is an alternate low-code library that can be used to replace hundreds of lines of code with few lines only which makes experiments exponentially fast and efficient. Pycaret Setup interface.<br>
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2008-05-17%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
-### Implementing and COmparing Several Models Performances.
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+### Implementing and Comparing Several Models Performances.
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2008-06-26%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
  * An easier method to see and evalute which models fits our dataset best is to check their Root MEan Squared Errors (RMSE) and Mean Average Percentage Errors (MAPE) values. In short, RMSE represents how far / deviates the predicted error value relative to the real ones, meanwhile MAPE represent it in percentage. SO its best if we want to look out for the lowest of both RMSE and MAPE. Here we can see top 3 models have relatively good RMSE and MAPE. We will use these 3 models as base for now. 3 Models includes, Light Gradient Boosting Machine, Random Forest and Extra Trees Regeressor.
 
 ### Models Features Importances
 Feature Importance refers to techniques that calculate a score for all the input features for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict a certain variable.
 
  * LGBM <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index3.png) <br>
  
  * Random Forest <br>
-  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index4.png) <br>
   
  * Extra Trees <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index5.png) <br>
  
  * Here we can conclude base on the 3 plot models above, factors to watch out for are The amount of Income households have earned, House located in the land, and longitude as well as latitude. However, we are yet to know how the values affect those factors are to the target features - houseprice-. TO address it, we use SHAP model interpreation model
 
@@ -83,13 +86,13 @@ SHAP stands for “SHapley Additive exPlanations.” Shapley values are a widely
 When using SHAP values in model explanation, we can measure the input features’ contribution to individual predictions. We won’t be covering the complex formulas to calculate SHAP values in this article, but we’ll show how to use the SHAP Python library to easily calculate SHAP values.
 
  * LGBM <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index6.png) <br>
  
  * Random Forest <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index7.png) <br>
   
  * Extra Trees <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index8.png) <br>
 
 Insights we can get from those 3 plots above:
  * Higher value of housholds income led to a higher predicted house prices, meanwhile it is true for the opposite. This is very reasonable.
@@ -100,11 +103,11 @@ Now we proceed to visualize the data checking to see wehter to model prediction 
 
 ### Visualization 
  * `Total HouseHolds Income` in respect to `Houseprices` <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index9.png) <br>
  * As we can see from the plot a higher huseholds income is, the higher the houseprices, while the opposite is also true <br>
   
  * `Ocean Prozimity` In Respect to `Houseprices` <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index10.png) <br>
  * Houses located in less than an hour from the ocean have the highest total house prices value, mean while ones located in inland is the second highest followed by located in Near ocean and Near bay. This sort of do not go in line with our model presumes, this as well confirms our third model insight is not totally correct, it did to some extent but not all. This lead to a conclusion that the factors influencing house prices significantly is the households income themselves and not where its located. 
 
 ### Conclusion
