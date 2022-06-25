@@ -15,7 +15,7 @@ But first we may need to define the business question.<br>
  ### Business Questions:
  * Which factor(s) contributes when it comes to housing prices? 
  * If there are indeed factors contributing to houses price, how well is it?
- * Which decision step to be taken moving forward?
+ * Which course of action to be taken moving forward?
 
 ### Data Processing / Modeling Includes:
  * **EDA & Pre processing**: Data exploring. visualizing and cleaning
@@ -101,10 +101,11 @@ Now we proceed to visualize the data checking to see wehter to model prediction 
 ### Visualization 
  * `Total HouseHolds Income` in respect to `Houseprices` <br>
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
- 
- 
- * `Ocean Prozimity` In Respect to `Houseprices`
+ * As we can see from the plot a higher huseholds income is, the higher the houseprices, while the opposite is also true <br>
+  
+ * `Ocean Prozimity` In Respect to `Houseprices` <br>
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
- 
- * `Population` In respect to `Houseprices`
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ * Houses located in less than an hour from the ocean have the highest total house prices value, mean while ones located in inland is the second highest followed by located in Near ocean and Near bay. This sort of do not go in line with our model presumes, this as well confirms our third model insight is not totally correct, it did to some extent but not all. This lead to a conclusion that the factors influencing house prices significantly is the households income themselves and not where its located. 
+
+### Conclusion
+ * WHen it comes to predicting house prices its best to look out for how much households income obtained in a year on average. Because this significantly affects how much the house will be worth in the near future.
