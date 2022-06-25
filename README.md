@@ -100,11 +100,11 @@ Now we proceed to visualize the data checking to see wehter to model prediction 
 
 ### Visualization 
 * `Total HouseHolds Income` in respect to `Houseprices` <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index9.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index10.png) <br>
 * As we can see from the plot a higher huseholds income is, the higher the houseprices, while the opposite is also true <br>
   
 * `Ocean Prozimity` In Respect to `Houseprices` <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index10.png) <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index9.png) <br>
 * Houses located in less than an hour from the ocean have the highest total house prices value, mean while ones located in inland is the second highest followed by located in Near ocean and Near bay. This sort of do not go in line with our model presumes, this as well confirms our third model insight is not totally correct, it did to some extent but not all. This lead to a conclusion that the factors influencing house prices significantly is the households income themselves and not where its located. <br>
 
 ### Conclusion
