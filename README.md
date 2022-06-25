@@ -5,6 +5,29 @@
 * One hot encoding and standard scaler are used to pre process dataaset before implemented it to machine learning model.
 * Linear regression, Support Vector regression and Tree based and Gradient boosting regressor model are used alongside gridsearch cv to find and optimize the best best model.
 
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/intro.png) 
+
+Property valuation is an imprecise science. Individual appraisers and valuers bring their own experience, metrics and skills to a job. Consistency is difficult, with UK and Australian-based studies suggesting valuations between two professionals can differ by up to 40%. Perhaps a well-trained machine could perform this task in place of a human, with greater consistency and accuracy,br>
+Let’s prototype this idea and train some ML models using data about a house’s features, costs and neighbourhood profile to predict its value. Our target variable — the houses's  price — is numerical, hence the ML task is regression. (For a categorical target, the task becomes classification.)<br>
+We’ll use a dataset from california housing data which simulates a portfolio of 20.640 properties, there are 26 columns.<b>
+But first we may need to define the business question.<br>
+ 
+ ### Business Questions:
+ * Which factor(s) contributes when it comes to housing prices? 
+ * If there are indeed factors contributing to houses price, how well is it?
+ * Which decision step to be taken moving forward?
+
+Now we move on the data modeling / data processing steps: 
+
+### The Steps for tihs modeling includes:
+ * **EDA & Pre processing**: Data exploring. visualizing and cleaning
+ * **Model training**: we’ll train and tune some tried-and-true classification algorithms, such as ridge and lasso regression.
+ * **Performance evaluation**: we’ll look at common regression task metrics like the R²-score and mean squared average.
+ * **Business Action**: Decision driven data needed to be taken to action to improve business.
+
+### Data Exploration and Pre Processing
+Exploratory data analysis (EDA) helps us understand the data and provides ideas and insights for data cleaning and feature engineering. Data cleaning prepares the data for our algorithms while feature engineering is the magic sauce that will really help our algorithms draw out the underlying patterns from the dataset.
+
 ### Code and Resource Used
 * Packages : pandas, numpy, matplotlib, seaborn, sci-kit learn
 
