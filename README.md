@@ -50,7 +50,7 @@ But first we may need to define the business question.<br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
 * Majority of the features are right skewed distribtuion, in the exception of housing age, latitude and longitude. This means, majority of them are in closest to their lower bound values, meanwhile some are in the distance or close to the higher bounds counterpart.
 
-* Boxplot plot / Outilers Checking
+* Boxplot plot / Outilers Checking <br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
  * This bloxplot proves that the right skewed features have some outliers to some extent. Evidence why it is right skewed.
 
