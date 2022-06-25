@@ -7,9 +7,9 @@
 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/intro.png) 
 
-Property valuation is an imprecise science. Individual appraisers and valuers bring their own experience, metrics and skills to a job. Consistency is difficult, with UK and Australian-based studies suggesting valuations between two professionals can differ by up to 40%. Perhaps a well-trained machine could perform this task in place of a human, with greater consistency and accuracy,br>
-Let’s prototype this idea and train some ML models using data about a house’s features, costs and neighbourhood profile to predict its value. Our target variable — the houses's  price — is numerical, hence the ML task is regression. (For a categorical target, the task becomes classification.)<br>
-We’ll use a dataset from california housing data which simulates a portfolio of 20.640 properties, there are 26 columns.<b>
+Property valuation is an imprecise science. Individual appraisers and valuers bring their own experience, metrics and skills to a job. Consistency is difficult, with UK and Australian-based studies suggesting valuations between two professionals can differ by up to 40%. Perhaps a well-trained machine could perform this task in place of a human, with greater consistency and accuracy,<br>
+Let’s prototype this idea and train some ML models using data about a house’s features, costs and neighbourhood profile to predict its value. Our target variable — the houses's  price is numerical, hence the ML task is regression. (For a categorical target, the task becomes classification.)<br>
+We’ll use a dataset from california housing data which simulates a portfolio of 20.640 properties, there are 26 columns.<br>
 But first we may need to define the business question.<br>
  
  ### Business Questions:
