@@ -86,7 +86,7 @@ Feature Importance refers to techniques that calculate a score for all the input
 Interpretability is the degree to which a human can understand the cause of a decision. Another one is: Interpretability is the degree to which a human can consistently predict the model’s result . The higher the interpretability of a machine learning model, the easier it is for someone to comprehend why certain decisions or predictions have been made <br>
 
 SHAP stands for “SHapley Additive exPlanations.” Shapley values are a widely used approach from cooperative game theory. The essence of Shapley value is to measure the contributions to the final outcome from each player separately among the coalition, while preserving the sum of contributions being equal to the final outcome.
-When using SHAP values in model explanation, we can measure the input features’ contribution to individual predictions. We won’t be covering the complex formulas to calculate SHAP values in this article, but we’ll show how to use the SHAP Python library to easily calculate SHAP values. <br>
+When using SHAP values in model explanation, we can measure the input features’ contribution to individual predictions.
 
 * LGBM <br>
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index6.png) <br>
