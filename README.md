@@ -2,7 +2,7 @@
 * Build a machine learning regression model to estimate and predict housing price located in california region.
 * Engineered some feaures to better specify how many rooms, bedrooms per rooms, bedrooms per household and population per household.
 * Exploratory data with seaborn and matplotlib help giving better understanding of which specific area having the heighest or lowest house price and which are the most densely populated.
-* One hot encoding and standard scaler are used to pre process dataaset before implemented it to machine learning model.
+* One hot encoding and Robust scaler are used to pre process dataaset before implemented it to machine learning model.
 * Several machine learning models are used alongside gridsearch cv to find and optimize the best best model.
 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/intro.png) 
@@ -19,8 +19,8 @@ But first we may need to define the business question.<br>
 
 ### Data Processing / Modeling Includes:
  * **EDA & Pre processing**: Data exploring. visualizing and cleaning
- * **Model training**: we’ll train and tune some tried-and-true classification algorithms, such as ridge and lasso regression.
- * **Performance evaluation**: we’ll look at common regression task metrics like the R²-score and mean squared average.
+ * **Model training**: we’ll train and tune some tried-and-true classification algorithms.
+ * **Performance evaluation**: we’ll look at common regression performance metrics like the RMSE and MAPE.
  * **Business Action**: Decision driven data needed to be taken to action to improve business.
 
 ### Code and Resource Used 
@@ -29,7 +29,7 @@ But first we may need to define the business question.<br>
 ### Dataset Profiling
 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
- * Dataset includes 20.640 observations and 10 columns with a totaldimesion of 206.400
+ * Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400
  
 ### Features Types
 
@@ -39,8 +39,12 @@ But first we may need to define the business question.<br>
  ### Missing Value CHecking and Handling
  
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
- * Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. 
- 
+ * Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. If done, then we corss check to see if ther'sstill missing values. <br>
+
+### Descriptive Statistics 
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
+ * Several features have a gap between its median and mean, possibly they willbe either right or left skedwed distribution. 
+
 ### Features DIstribution
 * Numerical features distribution <br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
@@ -50,44 +54,26 @@ But first we may need to define the business question.<br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
  * This bloxplot proves that the right skewed features have some outliers to some extent. Evidence why it is right skewed.
 
-### Data Pre Processing Before Building and Implement Model
-* First to split between train and test dataset with a proportion of 80 % of train and 20 % of test.
-* Define which features are numerical and categorical ones.
-* Standardizing numerical features with standardscaler, while onehot encoder is used to process the categorical features of both train and test set using custom pieline transformation.
+### Data Pre Processing and Model Implementation With Pycaret
+PyCaret is an open-source, low-code machine learning library in Python that automates machine learning workflows. It is an end-to-end machine learning and model management tool that exponentially speeds up the experiment cycle. It is an alternate low-code library that can be used to replace hundreds of lines of code with few lines only which makes experiments exponentially fast and efficient. Pycaret Setup interface.<br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
 
-### Model Building
-5 different models are used in which :
-* **Linear Regression**
-* **Decision Tree**
-* **Random Forest**
-* **Gradient Boosting Regressor**
-* **Support Vector Regressor**
+### Implementing and COmparing Several Models Performances.
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ * An easier method to see and evalute which models fits our dataset best is to check their Root MEan Squared Errors (RMSE) and Mean Average Percentage Errors (MAPE) values. In short, RMSE represents how far / deviates the predicted error value relative to the real ones, meanwhile MAPE represent it in percentage. SO its best if we want to look out for the lowest of both RMSE and MAPE. Here we can see top 3 models have relatively good RMSE and MAPE. We will use these 3 models as base for now. 3 Models includes, Light Gradient Boosting Machine, Random Forest and Extra Trees Regeressor.
 
-### Model Performance
-> **Linear Regression** RMSE : 68777.12503644277 <br>
-> **Linear Regression** Validation RMSE : 68917.9102919516
+### Models Features Importances
+Feature Importance refers to techniques that calculate a score for all the input features for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict a certain variable.
 
-> **Decision Tree** RMSE : 0.0 <br>
-> **Decision Tree** Validation RMSE : 67516.34954441145
-
-> **Random Forest** RMSE : 18141.62284949507 <br>
-> **Random Forest** Validation RMSE : 68917.9102919516
-
-> **Support Vector** RMSE : 118096.46334907328 <br>
-> **Support Vector** Validation RMSE : 118104.00396212477
-
-> **Gradient Boosting** RMSE : 118096.46334907328 <br>
-> **Gradient Boosting** Validation RMSE : 55200.46007555312
-
-Linear regression, deciison tree and random forest do not perform very well for this particular dataset all of them exibit a certain degree of overfitting, especially decision tree. <br>
-Gradient boosting regressor far outperformed the other 4 models.
-
-### Hyperparamneter Tuning
-* Best Model after gridsearch hyperparameter tuning
-> GradientBoostingRegressor(max_depth=5, n_estimators=1000, random_state=50)
-
-### Model Performance on Test Set
-We got the models performance increased after using gridsearch hyperparameter tuning. <br>
-From 55200 to 47682
->Final Model RMSE : 47682.741973582626 <br>
- Final Model MAE : 31395.550834475882
+ * LGBM <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ 
+ * Random Forest <br>
+  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+  
+ * Extra Trees <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ 
+  
+### Models Features Interpretability
+Interpretability is the degree to which a human can understand the cause of a decision. Another one is: Interpretability is the degree to which a human can consistently predict the model’s result . The higher the interpretability of a machine learning model, the easier it is for someone to comprehend why certain decisions or predictions have been made <br>
