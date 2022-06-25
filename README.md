@@ -36,7 +36,7 @@ But first we may need to define the business question.<br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
  * Ocean proximity seems the only categorical / non numeric ones in dataset. It refers to how close approximately the house from the sea / ocean.
  
- ### Missing Value CHecking and Handling
+ ### Missing Value Checking and Handling
  
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
  * Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. If done, then we corss check to see if ther'sstill missing values. <br>
@@ -74,6 +74,37 @@ Feature Importance refers to techniques that calculate a score for all the input
  * Extra Trees <br>
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
  
-  
-### Models Features Interpretability
+ * Here we can conclude base on the 3 plot models above, factors to watch out for are The amount of Income households have earned, House located in the land, and longitude as well as latitude. However, we are yet to know how the values affect those factors are to the target features - houseprice-. TO address it, we use SHAP model interpreation model
+
+### SHAP Model Interpretability
 Interpretability is the degree to which a human can understand the cause of a decision. Another one is: Interpretability is the degree to which a human can consistently predict the model’s result . The higher the interpretability of a machine learning model, the easier it is for someone to comprehend why certain decisions or predictions have been made <br>
+
+SHAP stands for “SHapley Additive exPlanations.” Shapley values are a widely used approach from cooperative game theory. The essence of Shapley value is to measure the contributions to the final outcome from each player separately among the coalition, while preserving the sum of contributions being equal to the final outcome.
+When using SHAP values in model explanation, we can measure the input features’ contribution to individual predictions. We won’t be covering the complex formulas to calculate SHAP values in this article, but we’ll show how to use the SHAP Python library to easily calculate SHAP values.
+
+ * LGBM <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ 
+ * Random Forest <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+  
+ * Extra Trees <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+
+Insights we can get from those 3 plots above:
+ * Higher value of housholds income led to a higher predicted house prices, meanwhile it is true for the opposite. This is very reasonable.
+ * Higher value of both langitud and latitude led to a lower predicted house prices, the opposite is true as well. This means the closer it gets to ocean / sea level, the higher the huose prices will be.
+ * THe last feature is weteher or not the house located inland. If is it true then it led to a lower predicted houseprices, and if it False led to a higher predicted house prices. This is synergious and inline with our previous latitude and longitude insight.
+
+Now we proceed to visualize the data checking to see wehter to model prediction is right.
+
+### Visualization 
+ * `Total HouseHolds Income` in respect to `Houseprices` <br>
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ 
+ 
+ * `Ocean Prozimity` In Respect to `Houseprices`
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ 
+ * `Population` In respect to `Houseprices`
+ ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
