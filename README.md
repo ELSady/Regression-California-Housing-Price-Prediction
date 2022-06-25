@@ -29,7 +29,7 @@ But first we may need to define the business question.<br>
 ### Dataset Profiling
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2006-40-28%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
-* Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400 <br>
+Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400 <br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-18-30%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png)
  
 ### Features Types
