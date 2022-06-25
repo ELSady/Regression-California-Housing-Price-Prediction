@@ -3,13 +3,13 @@
 * Engineered some feaures to better specify how many rooms, bedrooms per rooms, bedrooms per household and population per household.
 * Exploratory data with seaborn and matplotlib help giving better understanding of which specific area having the heighest or lowest house price and which are the most densely populated.
 * One hot encoding and standard scaler are used to pre process dataaset before implemented it to machine learning model.
-* Linear regression, Support Vector regression and Tree based and Gradient boosting regressor model are used alongside gridsearch cv to find and optimize the best best model.
+* Several machine learning models are used alongside gridsearch cv to find and optimize the best best model.
 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/intro.png) 
 
 Property valuation is an imprecise science. Individual appraisers and valuers bring their own experience, metrics and skills to a job. Consistency is difficult, with UK and Australian-based studies suggesting valuations between two professionals can differ by up to 40%. Perhaps a well-trained machine could perform this task in place of a human, with greater consistency and accuracy.
 Let’s prototype this idea and train some ML models using data about a house’s features, costs and neighbourhood profile to predict its value. Our target variable the houses's  price is numerical, hence the ML task is regression. (For a categorical target, the task becomes classification.).
-We’ll use a dataset from california housing data which simulates a portfolio of 20.640 properties, there are 26 columns.
+We’ll use a dataset from california housing data which simulates a portfolio of 20.640 properties, there are 10 columns.
 But first we may need to define the business question.<br>
  
  ### Business Questions:
@@ -17,30 +17,38 @@ But first we may need to define the business question.<br>
  * If there are indeed factors contributing to houses price, how well is it?
  * Which decision step to be taken moving forward?
 
-Now we move on the data modeling / data processing steps: 
-
-### The Steps for tihs modeling includes:
+### Data Processing / Modeling Includes:
  * **EDA & Pre processing**: Data exploring. visualizing and cleaning
  * **Model training**: we’ll train and tune some tried-and-true classification algorithms, such as ridge and lasso regression.
  * **Performance evaluation**: we’ll look at common regression task metrics like the R²-score and mean squared average.
  * **Business Action**: Decision driven data needed to be taken to action to improve business.
 
-### Data Exploration and Pre Processing
-Exploratory data analysis (EDA) helps us understand the data and provides ideas and insights for data cleaning and feature engineering. Data cleaning prepares the data for our algorithms while feature engineering is the magic sauce that will really help our algorithms draw out the underlying patterns from the dataset.
-
-### Code and Resource Used
+### Code and Resource Used 
 * Packages : pandas, numpy, matplotlib, seaborn, sci-kit learn
 
-### Exploratory Data Analysis
+### Dataset Profiling
+
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
+ * Dataset includes 20.640 observations and 10 columns with a totaldimesion of 206.400
+ 
+### Features Types
+
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
+ * Ocean proximity seems the only categorical / non numeric ones in dataset. It refers to how close approximately the house from the sea / ocean.
+ 
+ ### Missing Value CHecking and Handling
+ 
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
+ * Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. 
+ 
+### Features DIstribution
 * Numerical features distribution <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
+* Majority of the features are right skewed distribtuion, in the exception of housing age, latitude and longitude. This means, majority of them are in closest to their lower bound values, meanwhile some are in the distance or close to the higher bounds counterpart.
 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) 
-
-* Income Stratified Distribution <br>
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) 
-
-* Population <br>
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index2.png)
+* Boxplot plot / Outilers Checking
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+ * This bloxplot proves that the right skewed features have some outliers to some extent. Evidence why it is right skewed.
 
 ### Data Pre Processing Before Building and Implement Model
 * First to split between train and test dataset with a proportion of 80 % of train and 20 % of test.
@@ -83,13 +91,3 @@ We got the models performance increased after using gridsearch hyperparameter tu
 From 55200 to 47682
 >Final Model RMSE : 47682.741973582626 <br>
  Final Model MAE : 31395.550834475882
-
-
-
-
-
-
-
-
-
-
