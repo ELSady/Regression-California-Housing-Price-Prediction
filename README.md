@@ -4,7 +4,7 @@
 * Features categorical encoding and Robust scaler are used to pre process dataaset before implemented it to machine learning model.
 * Several machine learning models are used alongside gridsearch cv to find and optimize the best best model.
 
-![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/images.jpg) 
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/287558.jpg) 
 
 Property valuation is an imprecise science. Individual appraisers and valuers bring their own experience, metrics and skills to a job. Consistency is difficult, with UK and Australian-based studies suggesting valuations between two professionals can differ by up to 40%. Perhaps a well-trained machine could perform this task in place of a human, with greater consistency and accuracy.
 Let’s prototype this idea and train some ML models using data about a house’s features, costs and neighbourhood profile to predict its value. Our target variable the houses's  price is numerical, hence the ML task is regression. (For a categorical target, the task becomes classification.).
