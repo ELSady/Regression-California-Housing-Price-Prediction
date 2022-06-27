@@ -139,4 +139,4 @@ Now we proceed to visualize the data checking to see wehter to model prediction 
 * Houses located in less than an hour from the ocean have the highest total house prices value, mean while ones located in inland is the second highest followed by located in Near ocean and Near bay. This sort of do not go in line with our model presumes, this as well confirms our third model insight is not totally correct, it did to some extent but not all. This lead to a conclusion that the factors influencing house prices significantly is the households income themselves and not where its located. <br>
 
 ### Conclusion
-* WH=hen it comes to predicting house prices its best to look out for how much households income obtained in a year on average. Because this significantly affects how much the house will be worth in the near future.
+* When it comes to predicting house prices its best to look out for how much households income obtained in a year on average. Because this significantly affects how much the house will be worth in the near future.
