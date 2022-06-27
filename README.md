@@ -28,7 +28,8 @@ But first we may need to define the business question.<br>
 ### Dataset Profiling
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2006-40-28%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
-Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400 <br>
+* Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400 <br>
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-18-30%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png)
  
 ### Features Types
@@ -37,15 +38,17 @@ Dataset includes 20.640 observations and 10 columns with a total dimesion of 206
  
  ### Missing Value Checking and Handling
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-19-10%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
+
 * Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. If done, then we corss check to see if ther'sstill missing values. <br>
 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-53-30%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
+
 * Data has been cleaned. <br>
 
 ### Descriptive Statistics 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2009-38-56%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
-* Several features have a gap between its median and mean, possibly they willbe either right or left skedwed distribution.
-* 
+* Several features have a gap between its median and mean, possibly they will be either right or left skewed distribution.
+
 ### Features DIstribution
 * Numerical features distribution <br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
@@ -59,25 +62,32 @@ Insight we can get following the distribution plots include:
 
 * Boxplot plot / Outilers Checking <br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
+
 * This bloxplot proves that the right skewed features have some outliers to some extent. Evidence why it is right skewed. <br>
 
 ### Data Pre Processing and Model Implementation With Pycaret
 PyCaret is an open-source, low-code machine learning library in Python that automates machine learning workflows. It is an end-to-end machine learning and model management tool that exponentially speeds up the experiment cycle. It is an alternate low-code library that can be used to replace hundreds of lines of code with few lines only which makes experiments exponentially fast and efficient. Pycaret Setup interface.<br>
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2008-05-17%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
 ### Implementing and Comparing Several Models Performances.
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2008-06-26%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
+
 * An easier method to see and evalute which models fits our dataset best is to check their Root MEan Squared Errors (RMSE) and Mean Average Percentage Errors (MAPE) values. In short, RMSE represents how far / deviates the predicted error value relative to the real ones, meanwhile MAPE represent it in percentage. SO its best if we want to look out for the lowest of both RMSE and MAPE. Here we can see top 3 models have relatively good RMSE and MAPE. We will use these 3 models as base for now. 3 Models includes, Light Gradient Boosting Machine, Random Forest and Extra Trees Regeressor. <br>
 
 ### Models Features Importances
 Feature Importance refers to techniques that calculate a score for all the input features for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict a certain variable. <br>
+
 * LGBM <br>
+
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index3.png) <br>
  
 * Random Forest <br>
+
   ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index4.png) <br>
   
 * Extra Trees <br>
+
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index5.png) <br>
  
 * Here we can conclude base on the 3 plot models above, factors to watch out for are The amount of Income households have earned, House located in the land, and longitude as well as latitude. However, we are yet to know how the values affect those factors are to the target features - houseprice-. TO address it, we use SHAP model interpreation model <br>
@@ -89,12 +99,15 @@ SHAP stands for “SHapley Additive exPlanations.” Shapley values are a widely
 When using SHAP values in model explanation, we can measure the input features’ contribution to individual predictions.
 
 * LGBM <br>
+
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index6.png) <br>
  
 * Random Forest <br>
+
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index7.png) <br>
   
 * Extra Trees <br>
+
  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index8.png) <br>
 
 Insights we can get from those 3 plots above:
@@ -106,12 +119,16 @@ Now we proceed to visualize the data checking to see wehter to model prediction 
 
 ### Visualization 
 * `Total HouseHolds Income` in respect to `Houseprices` <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index10.png) <br>
+
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index10.png) <br>
+ 
 * As we can see from the plot a higher huseholds income is, the higher the houseprices, while the opposite is also true <br>
   
 * `Ocean Prozimity` In Respect to `Houseprices` <br>
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index9.png) <br>
+
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index9.png) <br>
+ 
 * Houses located in less than an hour from the ocean have the highest total house prices value, mean while ones located in inland is the second highest followed by located in Near ocean and Near bay. This sort of do not go in line with our model presumes, this as well confirms our third model insight is not totally correct, it did to some extent but not all. This lead to a conclusion that the factors influencing house prices significantly is the households income themselves and not where its located. <br>
 
 ### Conclusion
-* WHen it comes to predicting house prices its best to look out for how much households income obtained in a year on average. Because this significantly affects how much the house will be worth in the near future.
+* WH=hen it comes to predicting house prices its best to look out for how much households income obtained in a year on average. Because this significantly affects how much the house will be worth in the near future.
