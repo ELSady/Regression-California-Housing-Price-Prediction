@@ -88,15 +88,15 @@ Feature Importance refers to techniques that calculate a score for all the input
 
 * LGBM <br>
 
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index3.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index3.png) <br>
  
 * Random Forest <br>
 
-  ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index4.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index4.png) <br>
   
 * Extra Trees <br>
 
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index5.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index5.png) <br>
  
 * Here we can conclude base on the 3 plot models above, factors to watch out for are The amount of Income households have earned, House located in the land, and longitude as well as latitude. However, we are yet to know how the values affect those factors are to the target features - houseprice-. TO address it, we use SHAP model interpreation model <br>
 
@@ -108,15 +108,15 @@ When using SHAP values in model explanation, we can measure the input featuresâ€
 
 * LGBM <br>
 
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index6.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index6.png) <br>
  
 * Random Forest <br>
 
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index7.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index7.png) <br>
   
 * Extra Trees <br>
 
- ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index8.png) <br>
+![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index8.png) <br>
 
 Insights we can get from those 3 plots above:
  * Higher value of housholds income led to a higher predicted house prices, meanwhile it is true for the opposite. This is very reasonable.
