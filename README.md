@@ -26,6 +26,7 @@ But first we may need to define the business question.<br>
 * Packages : pandas, numpy, matplotlib, seaborn, sci-kit learn
 
 ### Dataset Profiling
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2006-40-28%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
 * Dataset includes 20.640 observations and 10 columns with a total dimesion of 206.400 <br>
@@ -33,10 +34,12 @@ But first we may need to define the business question.<br>
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-18-30%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png)
  
 ### Features Types
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-18-49%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 * Ocean proximity seems the only categorical / non numeric ones in dataset. It refers to how close approximately the house from the sea / ocean. <br>
  
  ### Missing Value Checking and Handling
+ 
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2007-19-10%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
 * Total bedrooms feature has 204 missing values. To process this, we can either drop or replace the them with a median value. Here i prefer to replace it with median because we can still retain the precious data which otherwise we could not do if we droped the missing values. If done, then we corss check to see if ther'sstill missing values. <br>
@@ -46,11 +49,14 @@ But first we may need to define the business question.<br>
 * Data has been cleaned. <br>
 
 ### Descriptive Statistics 
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2009-38-56%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
+
 * Several features have a gap between its median and mean, possibly they will be either right or left skewed distribution.
 
 ### Features DIstribution
 * Numerical features distribution <br>
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index.png) <br>
 
 Insight we can get following the distribution plots include:
@@ -61,6 +67,7 @@ Insight we can get following the distribution plots include:
 * Meanwhile the income predominantly around at the range of 3k per year.
 
 * Boxplot plot / Outilers Checking <br>
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/index1.png) <br>
 
 * This bloxplot proves that the right skewed features have some outliers to some extent. Evidence why it is right skewed. <br>
@@ -71,6 +78,7 @@ PyCaret is an open-source, low-code machine learning library in Python that auto
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2008-05-17%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
 ### Implementing and Comparing Several Models Performances.
+
 ![alt text](https://github.com/ELSady/Regression-California-Housing-Price-Prediction/blob/main/Screenshot%202022-06-25%20at%2008-06-26%20California%20Housing%20Price%20Prediction%20Model%20Performances%20and%20Evaluation%20-%20Jupyter%20Notebook.png) <br>
 
 * An easier method to see and evalute which models fits our dataset best is to check their Root MEan Squared Errors (RMSE) and Mean Average Percentage Errors (MAPE) values. In short, RMSE represents how far / deviates the predicted error value relative to the real ones, meanwhile MAPE represent it in percentage. SO its best if we want to look out for the lowest of both RMSE and MAPE. Here we can see top 3 models have relatively good RMSE and MAPE. We will use these 3 models as base for now. 3 Models includes, Light Gradient Boosting Machine, Random Forest and Extra Trees Regeressor. <br>
